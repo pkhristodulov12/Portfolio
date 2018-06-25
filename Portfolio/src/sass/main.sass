@@ -1,0 +1,417 @@
+
+
+@import "_vars.sass"
+
+
+
+
+// ------------------------------------ Common styles ------------------------------------
+
+body
+  font-family: Raleway-Regular
+ul
+  list-style: none
+a
+  text-decoration: none !important
+// Section styles
+section, footer
+  text-align: center
+  padding: 130px 0
+  font-family: Raleway-Regular
+  font-size: 15px
+  color: $font_light_color
+// Faded bg
+.bg_faded
+  background-color: $bg_darker_color
+// Section title
+.section_main_title
+  font-family: Raleway-Black
+  font-size: 40px
+  color: $font_dark_color
+  text-transform: uppercase
+  margin-bottom: 50px
+  text-align: center
+  @media (max-width: 767px)
+    font-size: 2.5em
+  @media (max-width: 450px)
+    font-size: 2em
+.section_main_title_bold
+  font-size: 30px
+  color: $font_dark_color
+  text-transform: uppercase
+  margin-bottom: 50px
+  text-align: left
+  @media (max-width: 767px)
+    font-size: 2.5em
+  @media (max-width: 450px)
+    font-size: 2em
+  span
+    font-family: Raleway-Black
+    font-size: 45px
+    color: $accent_color
+    @media (max-width: 767px)
+      font-size: 1.3em
+    @media (max-width: 450px)
+      font-size: 1.1em
+
+// Preloader
+#page-preloader
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background: $font_white_color
+    z-index: 1000
+    overflow: hidden
+#page-preloader .spinner
+    width: 128px
+    height: 128px
+    position: absolute
+    left: 50%
+    top: 50%
+    background: url('../img/ripple.gif') no-repeat 50% 50%
+    margin: -64px 0 0 -64px
+// Buttons own
+.btn_own
+  font-family: Roboto-Bold
+  font-size: 15px
+  color: $accent_color !important
+  text-transform: uppercase
+  background-color: transparent
+  border: none
+  border-radius: 100px
+  padding: 15px 65px
+  max-width: 275px
+  margin: auto
+  float: none
+  border: 5px solid $accent_color
+  z-index: 0
+  &:hover
+    color: $font_white_color !important
+    background-color: $accent_color
+
+
+
+
+// ------------------------------------ Landing styles ------------------------------------
+
+// Header logo
+#header_logo, .title_logo_type
+  font-family: Raleway-Regular
+  font-size: 30px
+  color: $font_white_color
+  text-transform: uppercase
+  position: absolute
+  top: 50px
+  left: 5%
+  z-index: 50
+  span
+    color: $accent_color_lighter
+    font-family: Raleway-ExtraBold
+    transition: $transitionProperty
+// Logo hover effect
+.cl-effect-4 a::after
+	position: absolute
+	top: 100%
+	left: 0
+	width: 100%
+	height: 1px
+	background: $accent_color_lighter
+	content: ''
+	opacity: 0
+	-webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s
+	-moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s
+	transition: height 0.3s, opacity 0.3s, transform 0.3s
+	-webkit-transform: translateY(-10px)
+	-moz-transform: translateY(-10px)
+	transform: translateY(-10px)
+.cl-effect-4 a:hover::after,
+.cl-effect-4 a:focus::after
+	height: 5px
+	opacity: 1
+	-webkit-transform: translateY(0px)
+	-moz-transform: translateY(0px)
+	transform: translateY(0px)
+
+// Nav in button
+nav
+  font-family: Roboto-Regular
+  z-index: 30 !important
+.cd-stretchy-nav.nav-is-visible ul span
+  color: $accent_color_lighter !important
+
+// Header
+header
+  height: 100vh
+  background-image: url("../img/header_bg.png")
+  background-size: cover
+  background-attachment: fixed
+  color: $font_white_color
+  padding-top: 35vh
+  text-align: center
+  i
+    position: absolute
+    bottom: 50px
+    transition: $transitionProperty
+    color: $font_white_color
+    z-index: 50
+    &:hover
+      color: $accent_color
+  .particles-js-canvas-el
+    position: absolute
+    left: 0
+    top: 0
+// Main <h1> title
+.header_title
+  text-align: center
+  h1
+    font-family: Raleway-Black
+    font-size: 75px
+    text-transform: uppercase
+    margin-bottom: 30px
+    @media (max-width: 767px)
+      font-size: 3.5em
+    @media (max-width: 450px)
+      font-size: 2em
+    span
+      font-size: 40px
+      @media (max-width: 767px)
+        font-size: 30px
+      @media (max-width: 450px)
+        font-size: 20px
+
+// Section "services" OLD!!!
+// section#services
+//   .bullet
+//     margin-top: 50px
+//     .bullet_title
+//       font-family: Raleway-Black
+//       font-size: 23px
+//       color: $font_dark_color
+//       text-transform: uppercase
+//       i
+//         margin-right: 10px
+
+// Section "why_us"
+section#why_us
+  text-align: left
+  overflow: hidden
+  h3
+    font-size: 35px
+    text-align: center
+    @media (max-width: 450px)
+      font-size: 1.5em
+  ul
+    li
+      margin: 20px 0
+      i
+        position: absolute
+        left: 30px
+        color: $success_color
+  img
+    min-width: 150%
+    @media (min-width: 1920px)
+      min-width: 100%
+    @media (max-width: 767px)
+      min-width: 100%
+      margin-top: 75px
+    @media (min-width: 768px) and (max-width: 991px)
+      min-width: 200%
+  .btn_own
+    margin: auto
+    margin-top: 50px
+    padding: 10px 30px
+    max-width: 200px
+
+// Section "services"
+section#services
+  text-align: left
+  h3
+    font-family: Raleway-Black
+    font-size: 30px
+    margin-bottom: 25px
+    color: $font_dark_color
+  .circle_desc
+    margin: auto
+    ul
+      font-size: 17px
+      padding-left: 0
+      li
+        margin-bottom: 15px
+        position: relative
+        &::before
+          content: ''
+          height: 100%
+          width: 5px
+          position: absolute
+          left: -10px
+          background-color: $accent_color
+  // Animated circle
+  .circle
+    height: 200px
+    margin: 0 auto 50px auto
+    text-align: center
+    transition: $transitionCircleProperty
+    img
+      position: absolute
+      width: 100px
+  @media (max-width: 1199px)
+    .circle
+      margin-top: 50px
+      margin-bottom: 25px
+  // Animated lines
+  .off_line
+    &::after
+      content: ''
+      position: absolute
+      left: 240px
+      right: 100px
+      height: 5px
+      background-color: $accent_color
+      transition: $transitionCircleProperty
+      @media (max-width: 1200px)
+        content: none
+  .on_line
+    &::after
+      content: ''
+      position: absolute
+      left: 240px
+      right: -43px
+      height: 5px
+      background-color: $accent_color
+      transition: $transitionCircleProperty
+      @media (max-width: 1200px)
+        content: none
+  #circle_4
+    &::after
+      content: none
+  #circle_1_top, #circle_2_top, #circle_3_top, #circle_4_top
+    height: 200px
+    position: absolute
+
+// Section "results"
+section#results
+  .progress_block
+    text-align: left
+    label
+      display: inline-block
+    .desc_label
+      font-family: Raleway-ExtraBold
+      text-transform: uppercase
+      max-width: 80%
+    .percent
+      float: right
+    #percent_3
+      @media (max-width: 401px)
+        margin-top: 21px
+    .progress-bar
+      background-color: $accent_color
+      transition: $transitionProgressProperty
+    .progress
+    	margin-bottom: 50px
+    #last_progress
+      margin-bottom: 0
+    @media (max-width: 767px)
+      margin-bottom: 50px
+  // Roi rise arrow
+  .roi_rise
+    width: 100px
+    height: 50px
+    margin-top: auto
+    padding-top: 50px
+    background-color: $accent_color
+    position: relative
+    transition: $transitionProgressProperty
+    &::before
+      content: ''
+      width: 50px
+      height: 50px
+      background-color: $font_white_color
+      position: absolute
+      top: 0px
+      left: -25px
+      transform: skew(-45deg)
+    &::after
+      content: ''
+      width: 50px
+      height: 50px
+      background-color: $font_white_color
+      position: absolute
+      top: 0px
+      left: 75px
+      transform: skew(45deg)
+  .roi_sum
+    min-height: 190px
+    font-family: Raleway-Black
+    font-size: 25px
+    color: $font_white_color
+    #roi_pref
+      color: $font_dark_color
+      text-transform: uppercase
+      position: absolute
+      bottom: -45px
+      left: 3px
+
+// Section "contact"
+section#contact
+  background-image: url("../img/contact_bg.png")
+  background-size: cover
+  background-attachment: fixed
+  .section_main_title
+    color: $font_white_color
+  form
+    margin: auto
+    max-width: 670px
+    .styled_input
+      font-family: Raleway-Regular
+      font-size: 14px
+      padding: 17.5px
+      margin-bottom: 15px
+      border: none
+      border-radius: 0
+      cursor: pointer
+      outline: none
+      color: $font_input_color
+      background-color: $input_bg_color
+      &:link, &:hover, &:focus, &:visited, &:active
+        outline: none
+      &::placeholder
+        color: $font_input_color
+    textarea
+      height: 130px
+      resize: none
+      margin-bottom: 50px !important
+    #submit_btn
+      cursor: pointer
+      transition: $transitionProperty
+      &:link, &:hover, &:focus, &:visited, &:active
+        color: $font_white_color !important
+        background-color: $accent_color !important
+      &:link, &:hover, &:focus, &:visited, &:active
+        outline: none
+        border: 5px solid $accent_color
+
+// Footer
+footer
+  background-color: $accent_dark_color
+  padding: 55px 0
+  .title_logo_type
+    color: $font_light_color
+    margin: 0
+    position: static
+    span
+      color: inherit
+    &:hover
+      span
+        color: $accent_color_lighter
+    @media (max-width: 401px)
+      margin-bottom: 30px
+  .social
+    .social_icon
+      width: 40px
+      height: 40px
+      margin: 0 5px
+  .container
+    @media (max-width: 401px)
+      justify-content: center !important
